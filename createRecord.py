@@ -1,8 +1,8 @@
 # ITP-100 Software Design
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
-# Date given to class: 10/25/22
-# Date of Submission: 10/28/22
+# Date given to class:
+# Date of Submission:
 # Description:
 # Input:
 # Output:
