@@ -8,3 +8,4 @@
 # Output:
 # Additional comments:
 def showAll():
+    print("test")

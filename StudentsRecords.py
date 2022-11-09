@@ -32,7 +32,8 @@ def mainMenu():
       choice1 = int(input('Enter your choice: '))
 # Runs a print command if the user enters a valid input.
       if choice1 == newRecord:
-         print('1. Create a record.')
+         print('1. Create a record')
+         createRecord.createRecord()
       elif choice1 == dispRecord:
          print('2. Show a record.')
       elif choice1 == delRecord:
