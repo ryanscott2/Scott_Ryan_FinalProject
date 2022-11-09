@@ -7,7 +7,6 @@
 # Input:
 # Output:
 # Additional comments:
-#test123
 def createRecord():
      studentid = int(input('Enter the student ID: '))
      firstname = input('Enter the First Name: ')
@@ -15,6 +14,7 @@ def createRecord():
      age = int(input('Enter the Age: '))
      adress = input('Enter the Address: ')
      phonenum = int(input('Enter the Phone Number: '))
+
 
 
 

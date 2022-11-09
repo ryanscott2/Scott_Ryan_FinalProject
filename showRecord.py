@@ -7,3 +7,4 @@
 # Input:
 # Output:
 # Additional comments:
+def showRecord():

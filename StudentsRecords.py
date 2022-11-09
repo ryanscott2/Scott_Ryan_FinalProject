@@ -10,8 +10,14 @@
 # Output: This program outputs the menu, and then the users choice. It does so for each input until the user enters 5.
 # Additional Comments: This program only accepts integers as input. Any other input will crash it.
 
+import createRecord
+import showRecord
+import deleteRecord
+import showAllRecords
+# why is this auto running the function in createRecord?
+
 newRecord = 1
-showRecord = 2
+dispRecord = 2
 delRecord = 3
 dispAllRecords = 4
 exit = 5
@@ -26,8 +32,8 @@ def mainMenu():
       choice1 = int(input('Enter your choice: '))
 # Runs a print command if the user enters a valid input.
       if choice1 == newRecord:
-         print('1. Create a new record.')
-      elif choice1 == showRecord:
+         print('1. Create a record.')
+      elif choice1 == dispRecord:
          print('2. Show a record.')
       elif choice1 == delRecord:
          print('3. Delete a record.')
