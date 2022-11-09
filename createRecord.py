@@ -14,23 +14,22 @@ def createRecord():
      firstname = (input('Enter the First Name: '))
      lastname = (input('Enter the Last Name: '))
      age = (input('Enter the Age: '))
-     adress = (input('Enter the Address: '))
+     address = (input('Enter the Address: '))
      phonenum = (input('Enter the Phone Number: '))
-     recordList = [firstname, lastname, [studentid,  age, adress, phonenum]]
-     with open("file_records.txt", "w") as txt_file:
+     recordList = [firstname, ', ', lastname, ' (', 'ID: ', studentid, ', ', 'Age: ',  age, ', ', 'Address: ',
+                   address, ', ', 'Phone number: ', phonenum, ')']
+     with open('file_records.txt', 'a') as txt_file:
           for line in recordList:
-               txt_file.write(" ".join(line) + "\n")
-     #for i in recordList:
-          #file_records.write(i)
+               txt_file.write("".join(line))
      file_records.write('\n')
      file_records.close()
-     print(recordList)
 
 
 
 
 
-createRecord()
+
+
 
 
 
