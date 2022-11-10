@@ -7,7 +7,7 @@
 # formatted in a manner that makes it easier to search for/sort specific records. I will include more detail in comments
 # Input: This file takes the student id, first and last name, age, address, and phone number as inputs
 # Output: This file outputs "recordList" to "file_records.txt"
-# Additional comments: All inputs are stores as strings so it will work with any input that can be stored as a string.
+# Additional comments: All inputs are stores as strings, it will work with any input that can be stored as a string.
 
 def createRecord():
 # This opens the file an append mode so the records are added in chronological order.
@@ -20,15 +20,16 @@ def createRecord():
      address = (input('Enter the Address: '))
      phonenum = (input('Enter the Phone Number: '))
 # This stores the records as a list and adds punctuation to make the records more readable and easier to search.
+# I chose to store each student's record as one list to simplify formatting of the text file and possibly reduce
+# runtime in cases of high volume record storage.
      recordList = [lastname, ', ', firstname, ' (', 'ID: ', studentid, ', ', 'Age: ',  age, ', ', 'Address: ',
                    address, ', ', 'Phone number: ', phonenum, ')']
-# This opens a second file instance to make this loop easier less complicated.
      with open('file_records.txt', 'a') as txt_file:
 # This enters the list into "file_records.txt" and then creates a new line.
           for line in recordList:
                txt_file.write("".join(line))
      file_records.write('\n')
-# Closing both file instances
+# Closing text file
      file_records.close()
      txt_file.close()
 

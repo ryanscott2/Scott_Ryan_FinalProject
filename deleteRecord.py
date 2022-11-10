@@ -11,6 +11,7 @@
 # deleted. For example, entering "ID: " will match all the record files and delete them all.
 def delRecord():
     lastName = input('Enter the students last name: ')
+# Creating the list and iterable object
     lines = []
     lineCount = 0
 # Opens "file_records.txt" in read mode to store in a list.
