@@ -29,7 +29,7 @@ def mainMenu():
       menu()
 # Takes user input, only integers will work with this program.
       choice1 = int(input('Enter your choice: '))
-# Runs a print command if the user enters a valid input.
+# Calls the according function based on the users selection and runs a print command to tell them what they selected.
       if choice1 == newRecord:
          print('1. Create a record')
          createRecord.createRecord()
