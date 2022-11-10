@@ -13,16 +13,22 @@ def delRecord():
     lastName = input('Enter the students last name: ')
     lines = []
     lineCount = 0
+# Opens "file_records.txt" in read mode to store in a list.
     with open("file_records.txt", 'r') as txt_file:
-        # read an store all lines into list
+# read and store all lines into list
         lines = txt_file.readlines()
+# Reopens file in write mode as "txt_file"
     with open("file_records.txt", 'w') as txt_file:
         for number, line in enumerate(lines):
+# Adds 1 to line count for each line that does not contain last time and then puts the line back in the text file
             if lastName not in line:
                 lineCount+=1
                 txt_file.write(line)
+# If the length of lines is equal to the amount of lines without last name that were reprinted, there was no record
+# matching that lastName
     if len(lines) == lineCount:
         print('Record not found')
+# Closing "txt_file."
     txt_file.close()
 
 
