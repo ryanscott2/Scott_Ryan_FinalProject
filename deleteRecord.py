@@ -5,12 +5,14 @@
 # Date of Submission: 11/10/22
 # Description: This program will store the text file as a list, and then search that list for strings that match the
 # entered string. If there is a match it will delete any lines containing that match.
+# Step by step explanation is included in the comments.
 # Input: This program takes the last name as a string input
-# Output:
+# Output: This program will output 'Enter the student's last name' to prompt an input, and then either
+# 'Record(s) deleted' if there are records with that last name found, or 'Record not found' if no record is found.
 # Additional comments: Caution, entering strings other than the last name can result in the entire record file being
-# deleted. For example, entering "ID: " will match all the record files and delete them all.
+# deleted. For best results please enter only the student's last name with appropriate capitalization.
 def delRecord():
-    lastName = input('Enter the students last name: ')
+    lastName = input("Enter the student's last name: ")
 # Creating the list and iterable object
     lines = []
     lineCount = 0

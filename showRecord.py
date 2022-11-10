@@ -6,7 +6,7 @@
 # Description: This file searches through "file_records.txt" line by line and looks for any lines that have a string
 # matching "lastName." If the line contains a match it will add 1 to "lineCount" and print the record. The iterable
 # object "lineCount" allows the program to keep track of how many records match. If none match it will
-# print "Record not found"
+# print "Record not found." Step by step explanation is provided in the comments
 # Input: This file takes the last name of the student as input
 # Output: This file outputs record(s) with a string that matches the variable "last name"
 # Additional comments: Please only enter the students last name for best results as the entire records is a string.
