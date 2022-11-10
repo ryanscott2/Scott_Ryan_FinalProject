@@ -40,6 +40,7 @@ def mainMenu():
          print('3. Delete a record.')
       elif choice1 == dispAllRecords:
          print('4. Display all records.')
+         showAllRecords.showAll()
       elif choice1 == exit:
          print('5. Exiting the program.')
 # This runs if the user inputs an invalid selection and informs them of the valid selections.

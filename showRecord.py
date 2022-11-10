@@ -8,4 +8,21 @@
 # Output:
 # Additional comments:
 def showRecord():
-    print("test")
+    lastName = input('Enter the students last name: ')
+    file_records = open("file_records.txt", "r")
+    records = file_records.read()
+    recordsList = records.split("\n")
+    recordList=[]
+    #if lastName in recordsList:
+
+
+    print(recordsList)
+    file_records.close()
+
+showRecord()
+
+
+
+
+
+

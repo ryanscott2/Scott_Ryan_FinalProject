@@ -8,4 +8,10 @@
 # Output:
 # Additional comments:
 def showAll():
-    print("test")
+    allRecords = []  # Declare an empty list
+    with open('file_records.txt', 'rt') as txt_file:
+        for record in txt_file:
+            allRecords.append(record)
+        for element in allRecords:
+            print(element)
+        txt_file.close()
