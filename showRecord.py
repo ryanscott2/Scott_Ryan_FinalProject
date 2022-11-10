@@ -9,17 +9,13 @@
 # Additional comments:
 def showRecord():
     lastName = input('Enter the students last name: ')
-    file_records = open("file_records.txt", "r")
-    records = file_records.read()
-    recordsList = records.split("\n")
-    recordList=[]
-    #if lastName in recordsList:
+    with open('file_records.txt', 'r') as txt_file:
+        lines = txt_file.readlines()
+        for line in lines:
+            if line.find(lastName) != -1:
+                print('Record(s) with the last name', lastName, ':', line)
 
 
-    print(recordsList)
-    file_records.close()
-
-showRecord()
 
 
 

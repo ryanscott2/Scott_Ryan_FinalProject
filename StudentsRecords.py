@@ -36,6 +36,7 @@ def mainMenu():
          createRecord.createRecord()
       elif choice1 == dispRecord:
          print('2. Show a record.')
+         showRecord.showRecord()
       elif choice1 == delRecord:
          print('3. Delete a record.')
       elif choice1 == dispAllRecords:
