@@ -14,7 +14,6 @@ import createRecord
 import showRecord
 import deleteRecord
 import showAllRecords
-# why is this auto running the function in createRecord?
 
 newRecord = 1
 dispRecord = 2

@@ -16,7 +16,7 @@ def createRecord():
      age = (input('Enter the Age: '))
      address = (input('Enter the Address: '))
      phonenum = (input('Enter the Phone Number: '))
-     recordList = [firstname, ' ', lastname, ' (', 'ID: ', studentid, ', ', 'Age: ',  age, ', ', 'Address: ',
+     recordList = [lastname, ', ', firstname, ' (', 'ID: ', studentid, ', ', 'Age: ',  age, ', ', 'Address: ',
                    address, ', ', 'Phone number: ', phonenum, ')']
      with open('file_records.txt', 'a') as txt_file:
           for line in recordList:
