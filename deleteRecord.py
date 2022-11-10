@@ -9,14 +9,18 @@
 # Additional comments:
 def delRecord():
     lastName = input('Enter the students last name: ')
-    with open('file_records.txt', 'r+') as txt_file:
+    lines = []
+    with open("file_records.txt", 'r') as txt_file:
+        # read an store all lines into list
         lines = txt_file.readlines()
-        for line in lines:
+    with open("file_records.txt", 'w') as fp:
+        for number, line in enumerate(lines):
             if lastName not in line:
                 txt_file.write(line)
-    print(f'Record(s) with the last name {lastName} deleted.')
 
-delRecord()
+
+
+
 
 
 

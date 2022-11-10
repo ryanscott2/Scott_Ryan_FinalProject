@@ -39,6 +39,7 @@ def mainMenu():
          showRecord.showRecord()
       elif choice1 == delRecord:
          print('3. Delete a record.')
+         deleteRecord.delRecord()
       elif choice1 == dispAllRecords:
          print('4. Display all records.')
          showAllRecords.showAll()
