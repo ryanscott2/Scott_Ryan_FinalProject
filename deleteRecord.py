@@ -25,7 +25,7 @@ def delRecord():
         for number, line in enumerate(lines):
 # Adds 1 to line count for each line that does not contain last time and then puts the line back in the text file
             if lastName not in line:
-                lineCount+=1
+                lineCount += 1
                 txt_file.write(line)
 # If the length of lines is equal to the amount of lines without last name that were reprinted, there was no record
 # matching that lastName
