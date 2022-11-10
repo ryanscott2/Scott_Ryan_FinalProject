@@ -3,10 +3,12 @@
 # Instructor: Katherine Tupac
 # Date given to class: 10/31/22
 # Date of Submission: 11/10/22
-# Description:
-# Input:
+# Description: This program will store the text file as a list, and then search that list for strings that match the
+# entered string. If there is a match it will delete any lines containing that match.
+# Input: This program takes the last name as a string input
 # Output:
-# Additional comments:
+# Additional comments: Caution, entering strings other than the last name can result in the entire record file being
+# deleted. For example, entering "ID: " will match all the record files and delete them all.
 def delRecord():
     lastName = input('Enter the students last name: ')
     lines = []
