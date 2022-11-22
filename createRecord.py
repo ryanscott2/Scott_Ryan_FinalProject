@@ -1,8 +1,8 @@
 # ITP-100 Software Design
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
-# Date given to class: 10/31/22
-# Date of Submission: 11/10/22
+# Date given to class: 11/12/22
+# Date of Submission: 11/22/22
 # Description: This file takes the inputs listed below, stores them as strings, and then enters them into a list to be
 # formatted in a manner that makes it easier to search for/sort specific records.
 # Step by step explanation is included in the comments.

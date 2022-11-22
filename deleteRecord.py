@@ -1,8 +1,8 @@
 # ITP-100 Software Design
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
-# Date given to class: 10/31/22
-# Date of Submission: 11/10/22
+# Date given to class: 11/12/22
+# Date of Submission: 11/22/22
 # Description: This program will store the text file as a list, and then search that list for strings that match the
 # entered string. If there is a match it will delete any lines containing that match.
 # Step by step explanation is included in the comments.

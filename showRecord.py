@@ -1,8 +1,8 @@
 # ITP-100 Software Design
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
-# Date given to class: 10/31/22
-# Date of Submission: 11/10/22
+# Date given to class: 11/12/22
+# Date of Submission: 11/22/22
 # Description: This file searches through "file_records.txt" line by line and looks for any lines that have a string
 # matching "lastName." If the line contains a match it will add 1 to "lineCount" and print the record. The iterable
 # object "lineCount" allows the program to keep track of how many records match. If none match it will

@@ -1,8 +1,8 @@
 # ITP-100 Software Design
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
-# Date given to class: 10/31/22
-# Date of Submission: 11/10/22
+# Date given to class: 11/12/22
+# Date of Submission: 11/22/22
 # Description: This file takes all data in the text file, turns each line into a list item, and then prints the list.
 # Step by step explanation is included in comments.
 # Input: The only input required is "A" for ascending order, or "D" for descending order. Lower and uppercase work.

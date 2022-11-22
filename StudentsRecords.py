@@ -1,8 +1,8 @@
 # ITP-100 Software Design
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
-# Date given to class: 10/25/22
-# Date of Submission: 10/28/22
+# Date given to class: 11/12/22
+# Date of Submission: 11/22/22
 # Description: This program takes a users input to select a function from a menu. This is done using two functions
 # "mainMenu" which determines what to output given the users choice, and "menu" which stores the 8 lines of print
 # functions we need to properly format the menu. Additional detail is provided in comments.
