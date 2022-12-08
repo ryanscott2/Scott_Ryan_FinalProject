@@ -12,17 +12,15 @@
 # Additional comments: Caution, entering strings other than the last name can result in the entire record file being
 # deleted. For best results please enter only the student's last name with appropriate capitalization.
 def delRecord():
-    invalidInputs = [', ', ' (', 'ID: ', 'Address: ', 'Phone number: ', ')', ',', '(', 'ID:',
-                     'Address:', 'Phone number:', 'ID', 'Address', 'Phone number', 'Years Old']
+    invalidInputs = {', ', ' (', 'ID: ', 'Address: ', 'Phone number: ', ')', ',', '(', 'ID:',
+                     'Address:', 'Phone number:', 'ID', 'Address', 'Phone number', 'Years Old'}
     lastName = input("Enter the student's last name: ")
 # Filtering substrings used to format the records file that could result in all records being deleted.
-    if any(invalid in lastName for invalid in invalidInputs):
-        print('Please only enter the students last name')
-# Creating the list and iterable object
-    lines = []
+    if lastName in invalidInputs:
+        print('Please only enter the students last name\n')
+# Creating the iterable object to keep track of matches
     lineCount = 0
-    if not any(invalid in lastName for invalid in invalidInputs):
-        print('Please only enter the students last name')
+    if lastName not in invalidInputs:
 # Opens "file_records.txt" in read mode to store in a list.
         with open("file_records.txt", 'r') as txt_file:
 # read and store all lines into list
@@ -34,6 +32,7 @@ def delRecord():
                 if lastName not in line:
                     lineCount += 1
                     txt_file.write(line)
+        print(f'Record(s) with the last name {lastName} deleted')
 # If the length of lines is equal to the amount of lines without last name that were reprinted, there was no record
 # matching that lastName
         if len(lines) == lineCount:
