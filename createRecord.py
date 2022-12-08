@@ -8,11 +8,15 @@
 # Step by step explanation is included in the comments.
 # Input: This file takes the student id, first and last name, age, address, and phone number as inputs
 # Output: This file outputs "recordList" to "file_records.txt"
-# Additional comments: All inputs are stores as strings, it will work with any input that can be stored as a string.
+# Additional comments: All inputs are stored as strings, it will work with any input that can be stored as a string
+# that is not in "invalidInputs." While this is not perfect it is better than the alternative of the possibility of
+# records that can not be deleted, or deleting the entire record file with an invalid input.
 
 def createRecord():
-# This opens the file an append mode so the records are added in chronological order.
-     file_records = open('file_records.txt', 'a')
+# Creating the list of sub strings used in formatting the stored records. This will later prevent issues deleting and
+# showing records. This does mean no inputs with the listed substrings can be stored.
+     invalidInputs = [', ', ' (', 'ID: ', 'Address: ', 'Phone number: ', ')', ',', '(', 'ID:',
+                      'Address:', 'Phone number:', 'ID', 'Address', 'Phone number', 'Years Old']
 # Here we are prompting the user to enter the information
      studentid = (input('Enter the student ID: '))
      firstname = (input('Enter the First Name: '))
@@ -20,19 +24,27 @@ def createRecord():
      age = (input('Enter the Age: '))
      address = (input('Enter the Address: '))
      phonenum = (input('Enter the Phone Number: '))
+     invalidcount = 0
+     templist = [studentid, firstname, lastname, age, address, phonenum]
+     for item in templist:
+          if any(invalid in item for invalid in invalidInputs):
+               invalidcount += 1
+     if invalidcount != 0:
+# Most invalid inputs would be user error but in the case of rare names or nicknames an adjustment of capitalization
+# will allow the record to be stored
+          print('Please only enter the requested information, or adjust capitalization.')
+     if invalidcount == 0:
 # This stores the records as a list and adds punctuation to make the records more readable and easier to search.
 # I chose to store each student's record as one list to simplify formatting of the text file and possibly reduce
 # runtime in cases of high volume record storage.
-     recordList = [lastname, ', ', firstname, ' (', 'ID: ', studentid, ', ', 'Age: ',  age, ', ', 'Address: ',
-                   address, ', ', 'Phone number: ', phonenum, ')']
-     with open('file_records.txt', 'a') as txt_file:
+          recordList = [lastname, ', ', firstname, ' (', 'ID: ', studentid, ', ',  age, ' Years Old, ', 'Address: ',
+                         address, ', ', 'Phone number: ', phonenum, ')']
+          with open('file_records.txt', 'a') as txt_file:
 # This enters the list into "file_records.txt" and then creates a new line.
-          for line in recordList:
-               txt_file.write("".join(line))
-     file_records.write('\n')
-# Closing text file
-     file_records.close()
-     txt_file.close()
+               for line in recordList:
+                    txt_file.write("".join(line))
+               txt_file.write('\n')
+
 
 
 

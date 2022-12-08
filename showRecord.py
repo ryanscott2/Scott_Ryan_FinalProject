@@ -8,12 +8,13 @@
 # object "lineCount" allows the program to keep track of how many records match. If none match it will
 # print "Record not found." Step by step explanation is provided in the comments
 # Input: This file takes the last name of the student as input
-# Output: This file outputs record(s) with a string that matches the variable "last name"
+# Output: This file outputs record(s) with a string that matches the variable "lastName"
 # Additional comments: Please only enter the students last name for best results as the entire records is a string.
-# Entering other information will not break the program but may not return accurate results
+# Entering other information will not break the program but may not return accurate results.
 def showRecord():
 # Getting the desired search term from the user.
     lastName = input('Enter the students last name: ')
+    print()
 # Creating lineCount to keep track of matches.
     lineCount=0
 # Opening "file_records.txt" in read mode and reading the lines into a list called "lines"
@@ -30,8 +31,6 @@ def showRecord():
 # no records with that last name exist
     if lineCount == 0:
         print('Record not found')
-# Closes txt_file
-    txt_file.close()
 
 
 

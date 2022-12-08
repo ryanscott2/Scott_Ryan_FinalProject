@@ -11,6 +11,7 @@
 def showAll():
 # Requesting input to determine order of sorting
     order = input('Enter A for ascending order or D for descending order: ')
+    print()
 # Creating the list that the records will be added to
     allRecords = []
 # Opening the file in read mode under the name "txt_file"
@@ -21,14 +22,16 @@ def showAll():
 # If the user inputs 'A' or 'a' it will print in ascending order
         if order == 'A' or order == 'a':
 # For readability, I use a for loop to print each element on its own line
+            allRecords.sort()
             for element in allRecords:
-                allRecords.sort()
                 print(element)
 # Prints the list in descending order if the input is 'D' or 'd' by sorting in reverse
         elif order == 'D' or order == 'd':
             allRecords.sort(reverse=True)
             for element in allRecords:
                 print(element)
+        else:
+            print('Error: please enter "A" or "D"')
 # Closing the text file
         txt_file.close()
 
