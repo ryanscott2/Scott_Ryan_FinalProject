@@ -25,12 +25,12 @@ def showAll():
 # For readability, I use a for loop to print each element on its own line
             allRecords.sort()
             for element in allRecords:
-                print(element)
+                print(element, end='')
 # Prints the list in descending order if the input is 'D' or 'd' by sorting in reverse
         elif order == 'D' or order == 'd':
             allRecords.sort(reverse=True)
             for element in allRecords:
-                print(element)
+                print(element, end='')
 # Runs if the input is not as requested.
         else:
             print('Error: please enter "A" or "D"')

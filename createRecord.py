@@ -3,21 +3,19 @@
 # Instructor: Katherine Tupac
 # Date given to class: 11/12/22
 # Date of Submission: 12/8/22
-# Description: This file takes the inputs listed below, stores them as strings, checks to ensure no strings used in
-# formatting are stored and then enters them into a list to be formatted in a manner that makes it easier to search
-# for/sort specific records.
+# Description: This file takes the inputs listed below, stores them as strings, and then enters them into a list to be
+# formatted in a manner that makes it both easier to search for/sort specific records, and more readable.
 # Step by step explanation is included in the comments.
 # Input: This file takes the student id, first and last name, age, address, and phone number as inputs
-# Output: "recordList" to "file_records.txt", input prompts, and will inform the user if an input is invalid
+# Output: "recordList" to "file_records.txt", input prompts. Also outputs a message informing user if their input
+# is invalid
 # Additional comments: All inputs are stored as strings, it will work with any input that can be stored as a string
 # that is not in "invalidInputs." While this is not perfect it is better than the alternative of the possibility of
 # records that can not be deleted, or deleting the entire record file with a predictable invalid input.
 
 def createRecord():
-# Creating the set of sub strings used in formatting the stored records. This will later prevent issues deleting and
-# showing records. This does mean no inputs with the listed substrings can be stored.
-    invalidInputs = {', ', ' (', 'ID: ', 'Address: ', 'Phone number: ', ')', ',', '(', 'ID:', 'Address:',
-                     'Phone number:', 'ID', 'Address', 'Phone number', 'Years Old'}
+    invalid = [',', '(']
+    numinvalid = 0
 # Here we are prompting the user to enter the information
     studentid = (input('Enter the student ID: '))
     firstname = (input('Enter the First Name: '))
@@ -25,26 +23,25 @@ def createRecord():
     age = (input('Enter the Age: '))
     address = (input('Enter the Address: '))
     phonenum = (input('Enter the Phone Number: '))
-    invalidcount = 0
-    templist = [studentid, firstname, lastname, age, address, phonenum]
-    for item in templist:
-        if item in invalidInputs:
-            invalidcount += 1
-    if invalidcount != 0:
-# Most invalid inputs would be user error but in the case of rare names or nicknames an adjustment of capitalization
-# will allow the record to be stored
-        print('Please only enter the requested information, or adjust capitalization.')
-        if invalidcount == 0:
+# Checking lastname for any input that would cause issues with splitting in delete and show record
+    for i in invalid:
+# Checking if any character in i (each element of last name is compared separately under the name i) matches a character
+# in lastname (char)
+        if any(char in lastname for char in i):
+            print('"(" and "," are used to format the records. Please exclude those from the last name')
+            numinvalid += 1
+# Formatting and storing record if no invalid inputs are detected
+    if numinvalid == 0:
 # This stores the records as a list and adds punctuation to make the records more readable and easier to search.
 # I chose to store each student's record as one list to simplify formatting of the text file and possibly reduce
 # runtime in cases of high volume record storage.
-            recordList = [lastname, ', ', firstname, ' (', 'ID: ', studentid, ', ',  age, ' Years Old, ', 'Address: ',
-                         address, ', ', 'Phone number: ', phonenum, ')']
-            with open('file_records.txt', 'a') as txt_file:
+        recordList = [lastname, ', ', firstname, ' (', 'ID: ', studentid, ', ',  age, ' Years Old, ', 'Address: ',
+                      address, ', ', 'Phone number: ', phonenum, ')']
+        with open('file_records.txt', 'a') as txt_file:
 # This enters the list into "file_records.txt" and then creates a new line.
-                for line in recordList:
-                    txt_file.write("".join(line))
-                txt_file.write('\n')
+            for line in recordList:
+                txt_file.write("".join(line))
+            txt_file.write('\n')
 
 
 
