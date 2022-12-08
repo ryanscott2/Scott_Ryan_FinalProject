@@ -2,7 +2,7 @@
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
 # Date given to class: 11/12/22
-# Date of Submission: 11/22/22
+# Date of Submission: 12/8/22
 # Description: This program takes a users input to select a function from a menu. This is done using two functions
 # "mainMenu" which determines what to output given the users choice, and "menu" which stores the 8 lines of print
 # functions we need to properly format the menu. Additional detail is provided in comments.
@@ -32,25 +32,24 @@ def mainMenu():
         try:
 # Takes user input, only integers will work with this program.
             choice1 = int(input('Enter your choice: '))
-            print()
 # Calls the according function based on the users selection and runs a print command to tell them what they selected.
             if choice1 == newRecord:
-                print('1. Create a record\n')
+                print('1. Create a record')
                 createRecord.createRecord()
             elif choice1 == dispRecord:
-                print('2. Show a record.\n')
+                print('2. Show a record.')
                 showRecord.showRecord()
             elif choice1 == delRecord:
-                print('3. Delete a record.\n')
+                print('3. Delete a record.')
                 deleteRecord.delRecord()
             elif choice1 == dispAllRecords:
-                print('4. Display all records.\n')
+                print('4. Display all records.')
                 showAllRecords.showAll()
             elif choice1 == exit:
-                print('5. Exiting the program.\n')
+                print('5. Exiting the program.')
 # This runs if the user enters something that is not an integer.
         except ValueError:
-            print('Invalid selection. Please enter 1-5\n')
+            print('Invalid selection. Please enter 1-5')
 
 # The menu function stores the menu to be called when needed.
 def menu():
@@ -61,7 +60,7 @@ def menu():
     print('\t2. Show a record.')
     print('\t3. Delete a record.')
     print('\t4. Display All Records.')
-    print('\t5. Exit\n')
+    print('\t5. Exit')
 
 # Calling the mainMenu function.
 mainMenu()

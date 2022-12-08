@@ -2,15 +2,16 @@
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
 # Date given to class: 11/12/22
-# Date of Submission: 11/22/22
-# Description: This file takes the inputs listed below, stores them as strings, and then enters them into a list to be
-# formatted in a manner that makes it easier to search for/sort specific records.
+# Date of Submission: 12/8/22
+# Description: This file takes the inputs listed below, stores them as strings, checks to ensure no strings used in
+# formatting are stored and then enters them into a list to be formatted in a manner that makes it easier to search
+# for/sort specific records.
 # Step by step explanation is included in the comments.
 # Input: This file takes the student id, first and last name, age, address, and phone number as inputs
-# Output: This file outputs "recordList" to "file_records.txt"
+# Output: "recordList" to "file_records.txt", input prompts, and will inform the user if an input is invalid
 # Additional comments: All inputs are stored as strings, it will work with any input that can be stored as a string
 # that is not in "invalidInputs." While this is not perfect it is better than the alternative of the possibility of
-# records that can not be deleted, or deleting the entire record file with an invalid input.
+# records that can not be deleted, or deleting the entire record file with a predictable invalid input.
 
 def createRecord():
 # Creating the set of sub strings used in formatting the stored records. This will later prevent issues deleting and

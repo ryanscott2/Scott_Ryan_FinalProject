@@ -2,16 +2,17 @@
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
 # Date given to class: 11/12/22
-# Date of Submission: 11/22/22
+# Date of Submission: 12/8/22
 # Description: This file takes all data in the text file, turns each line into a list item, and then prints the list.
+# in ascending or descending order based on the users input.
 # Step by step explanation is included in comments.
-# Input: The only input required is "A" for ascending order, or "D" for descending order. Lower and uppercase work.
+# Input: The only input required is "A" for ascending order, or "D" for descending order.
 # Output: This file will output all records contained in "file_records.txt" in ascending or descending order.
-# Additional comments:
+# Additional comments: Both lower and uppercase A and D will work. Any other input will run the print statement undr
+# the else
 def showAll():
 # Requesting input to determine order of sorting
     order = input('Enter A for ascending order or D for descending order: ')
-    print()
 # Creating the list that the records will be added to
     allRecords = []
 # Opening the file in read mode under the name "txt_file"
@@ -30,9 +31,8 @@ def showAll():
             allRecords.sort(reverse=True)
             for element in allRecords:
                 print(element)
+# Runs if the input is not as requested.
         else:
             print('Error: please enter "A" or "D"')
-# Closing the text file
-        txt_file.close()
 
 
