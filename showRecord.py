@@ -3,14 +3,12 @@
 # Instructor: Katherine Tupac
 # Date given to class: 11/12/22
 # Date of Submission: 12/8/22
-# Description: This file searches through "file_records.txt" line by line and looks for any lines that have a string
-# matching "lastName" If the line contains a match it will add 1 to "lineCount" and print the record. The iterable
-# object "lineCount" allows the program to keep track of how many records match. If none match it will
-# print "Record not found." Step by step explanation is provided in the comments
+# Description: This file ready "file_records.txt" into a list, splits it twice so only the last name input is checked
+# for matches, and informs the user if there are or are not matches. Any matching records will be displayed.
 # Input: This file takes the last name of the student as input
-# Output: This file outputs record(s) with a string that matches the variable "lastName"
-# Additional comments: Please only enter the students last name for best results as the entire record is a string.
-# Entering other information will not break the program but may not return accurate results.
+# Output: This file outputs record(s) with a string that matches the variable "lastName", or 'Records(s) not found'
+# Additional comments: Like to deleteRecord file, please only enter the last name with proper capitalization. The input
+# filters and splitting should prevent the vast majority of errors cause by user input but is not a catch-all.
 def showRecord():
 # Getting the desired search term from the user.
     lastName = input('Enter the students last name: ')
@@ -33,7 +31,7 @@ def showRecord():
 # If there are no matches this will execute the print line and inform the user that
 # no records with that last name exist
     if lineCount == 0:
-        print('Record not found')
+        print('Record(s) not found')
 
 
 

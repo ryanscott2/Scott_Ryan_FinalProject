@@ -8,8 +8,8 @@
 # Step by step explanation is included in comments.
 # Input: The only input required is "A" for ascending order, or "D" for descending order.
 # Output: This file will output all records contained in "file_records.txt" in ascending or descending order.
-# Additional comments: Both lower and uppercase A and D will work. Any other input will run the print statement undr
-# the else
+# Additional comments: Both lower and uppercase A and D will work. Any other input will run the print statement under
+# the 'else'
 def showAll():
 # Requesting input to determine order of sorting
     order = input('Enter A for ascending order or D for descending order: ')

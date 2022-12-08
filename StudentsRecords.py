@@ -6,9 +6,9 @@
 # Description: This program takes a users input to select a function from a menu. This is done using two functions
 # "mainMenu" which determines what to output given the users choice, and "menu" which stores the 8 lines of print
 # functions we need to properly format the menu. Additional detail is provided in comments.
-# Input: The input must be integers, 1-5 are assigned to the choices on the menu.
+# Input: The input must be an integer, 1-5 are assigned to the choices on the menu.
 # Output: This program outputs the menu, and then the users choice. It does so for each input until the user enters 5.
-# Additional Comments: This program only accepts integers as input. Integers 0, 6-9 will just recall the menu.
+# Additional Comments: This program only accepts integers as input. Integers 0, 6-9 will recall the menu.
 # Non integers will run the exception.
 
 import createRecord

@@ -4,14 +4,14 @@
 # Date given to class: 11/12/22
 # Date of Submission: 12/8/22
 # Description: This file takes the inputs listed below, stores them as strings, and then enters them into a list to be
-# formatted in a manner that makes it both easier to search for/sort specific records, and more readable.
+# formatted in a manner that makes it both easier to search for/sort specific records, and more readable. If lastname
+# contains a ',' or '(' no record will be stored as this will cause issues with show and delete record.
 # Step by step explanation is included in the comments.
 # Input: This file takes the student id, first and last name, age, address, and phone number as inputs
 # Output: "recordList" to "file_records.txt", input prompts. Also outputs a message informing user if their input
 # is invalid
 # Additional comments: All inputs are stored as strings, it will work with any input that can be stored as a string
-# that is not in "invalidInputs." While this is not perfect it is better than the alternative of the possibility of
-# records that can not be deleted, or deleting the entire record file with a predictable invalid input.
+# excluding a ',' or '(' in lastname.
 
 def createRecord():
     invalid = [',', '(']

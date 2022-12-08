@@ -4,14 +4,14 @@
 # Date given to class: 11/12/22
 # Date of Submission: 12/8/22
 # Description: This program will store the text file as a list, split the list twice so only the last name is searched
-# for 'lastName' If there are no matches the user will be informed no records match that input.
+# for the string 'lastName' If there are no matches the user will be informed no records match that input.
 # Step by step explanation is included in the comments.
 # Input: This program takes the last name as a string input
-# Output: This program will output 'Enter the student's last name' to prompt an input, and then 'Record(s) deleted' if
-# there are records with that last name found, or 'Record not found' if no record is found. If an invalid input is
-# provided it will output 'Please only enter the students last name'
-# Additional comments: Caution, while there is an invalid input filter that will catch many errors, it is still possible
-# to enter a string that will delete the entire file. Please enter only the (case-sensitive) last name.
+# Output: This program will output 'Enter the student's last name' to prompt an input, and then
+# 'Record(s) with the last name {lastName} deleted' if there are records with that last name found, or
+# 'Record(s) not found' if no record is found.
+# Additional comments: For best results please only enter the last name with proper capitalization. The input filters
+# and splitting should prevent the vast majority of errors cause by user input but is not a catch-all.
 def delRecord():
     lastName = input("Enter the student's last name: ")
 # Creating the iterable object to keep track of matches
