@@ -59,7 +59,7 @@ def menu():
     print('\t1. Create a new record.')
     print('\t2. Show a record.')
     print('\t3. Delete a record.')
-    print('\t4. Display All Records.')
+    print('\t4. Display all Records.')
     print('\t5. Exit')
 
 # Calling the mainMenu function.
