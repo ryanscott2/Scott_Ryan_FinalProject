@@ -9,7 +9,7 @@
 # Input: The input must be an integer, 1-5 are assigned to the choices on the menu.
 # Output: This program outputs the menu, and then the users choice. It does so for each input until the user enters 5.
 # Additional Comments: This program only accepts integers as input. Integers 0, 6-9 will recall the menu.
-# Non integers will run the exception.
+# Non integers will run the exception. Records must be created before other functions will be usable.
 
 import createRecord
 import showRecord
