@@ -16,7 +16,8 @@
 def createRecord():
     invalid = [',', '(']
     numinvalid = 0
-# Here we are prompting the user to enter the information
+# Here we are prompting the user to enter the information. I chose to store inputs as strings for cases where student
+# IDs have letters, or a user enters a phone number like 123-456-7890
     studentid = (input('Enter the student ID: '))
     firstname = (input('Enter the First Name: '))
     lastname = (input('Enter the Last Name: '))
@@ -42,18 +43,4 @@ def createRecord():
             for line in recordList:
                 txt_file.write("".join(line))
             txt_file.write('\n')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
